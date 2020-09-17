@@ -9,7 +9,7 @@ const alanKey = process.env.REACT_APP_API_KEY;
 const App = () => {
 	const [newsArticles, setNewsArticles] = useState([]);
 	const [activeArticle, setActiveArticle] = useState(0);
-	const [isOpen, setIsOpen] = useState(false);
+	// const [isOpen, setIsOpen] = useState(false);
 
 	const classes = useStyles();
 
@@ -19,9 +19,10 @@ const App = () => {
 			onCommand: ({ command, articles, number }) => {
 				if (command === 'newHeadlines') {
 					setNewsArticles(articles);
-				} else if (command === 'instructions') {
-					setIsOpen(true);
-				} else if (command === 'highlight') {
+				} /*else if (command === 'instructions') {
+        setIsOpen(true) } */ else if (
+					command === 'highlight'
+				) {
 					setActiveArticle((prevActiveArticle) => prevActiveArticle + 1);
 				} else if (command === 'open') {
 					const parsedNumber =
