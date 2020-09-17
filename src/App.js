@@ -52,7 +52,7 @@ const App = () => {
 					alt='logo'
 				/>
 			</div>
-			<NewsCards articles={newsArticles} activeArticle={activeArticle}/>
+			<NewsCards articles={newsArticles} activeArticle={activeArticle} />
 		</div>
 	);
 };
